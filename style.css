@@ -70,7 +70,7 @@ img{
     width: 100%;
     display: flex;
     justify-content: center;
-    
+    z-index: 999 !important;
 }
 .nav-bar li{
     
@@ -98,9 +98,17 @@ img{
     border-left: 3px solid  var(--y-selected-text);
     border-right: 3px solid var(--y-selected-text);
     width: 70%;
-    position: absolute;
+    position: relative;
     left: 17%;
-    top: 150px;
+    margin-top: 150px !important;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 60vh;
+    box-sizing: border-box;
+    z-index: 100;
     -webkit-box-shadow: inset 200px 21px 194px 20px #12a6c03b;
     -moz-box-shadow: inset 200px 21px 194px 20px #c012b73b;
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
@@ -124,11 +132,9 @@ img{
     right: 0px;
 }
 .greetings-title {
-    padding: 160px 10px 160px 60px;
+    padding: 20px 10px 20px 60px;
     position: relative;
-    line-height: 70px;
     text-align: left;
-    font-size: 60px;
     letter-spacing: 2px;
     z-index: 1000;
 }
@@ -211,9 +217,10 @@ img{
     border-left: 3px solid  var(--y-selected-text);
     border-right: 3px solid var(--y-selected-text);
     width: 70%;
-    text-align: center;
+    position: relative;
     margin: 0 auto;
-    margin-top: 130px;
+    margin-top: 100px;
+    text-align: center;
     -webkit-box-shadow: inset 200px 21px 194px 20px #12a6c03b;
     -moz-box-shadow: inset 200px 21px 194px 20px #c012b73b;
     box-shadow: inset 200px 21px 194px 20px #12c0953b;
@@ -230,10 +237,10 @@ img{
     right: 0px;
 }
 .work-gallery{
-    padding:30px 0;
+    padding:15px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
     max-width: 700px;
     margin: 0 auto;
@@ -242,16 +249,18 @@ img{
    display: flex;
    flex-direction: column;
    align-items: center;
+   overflow: visible;
 }
 .work-project-card-title{
-    font-size: 30px;
-    padding: 20px 0 10px 0;
+    font-size: 26px;
+    padding: 10px 0 5px 0;
     letter-spacing: 1px;
     font-weight: 100;
-    color: white;
+    color: #FFFFFF;
     cursor: pointer;
     text-align: left;
     width: 100%;
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
 }
 .qr-card{
    width: 150px;
@@ -259,7 +268,9 @@ img{
 }
 .workPic{
     width: 100%;
-    height: 180px;
+    height: auto;
+    max-height: 150px;
+    max-width: 100%;
     object-fit: cover;
 }
 .mobile{
@@ -272,17 +283,18 @@ img{
     
 }
 .button-project {
-    border: 1px solid var(--b-non-selected-text);
+    border: 1px solid #00FFFF;
     display: inline-block;
-    padding: 10px 40px;
+    padding: 8px 30px;
     letter-spacing: 1px;
     cursor: pointer;
-    color: var(--y-non-selected-text);
+    color: #FFFFFF;
+    font-size: 15px;
 }
 .button-project:hover{
-    background-color: var(--b-selected-text);
+    background-color: var(--y-selected-text);
     color: var(--bg-color);
-    transition: all 1.5s;
+    transition: all 0.5s;
 }
 /* SKILLS  */
  
@@ -429,8 +441,8 @@ img{
 
 @media screen and (max-width: 1390px) {
     .content-card{
-        top: 90px;
-        height: 500px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .greetings-title{
         font-size: 45px;
@@ -473,7 +485,8 @@ img{
  
  @media screen and (max-width: 1200px){
     .content-card{
-    top: 120px;
+    top: 50%;
+    transform: translateY(-50%);
     }
     .greetings-title{
         font-size: 45px;
@@ -598,7 +611,8 @@ img{
           padding: 50px 10px 50px 10px;
       }
       .content-card{
-          top: 60px;
+          top: 50%;
+          transform: translateY(-50%);
       }
       .about-content-card{
         top: 10px;
@@ -664,9 +678,10 @@ img{
 
 /* HOME HERO TEXT FIX */
 .greetings-title h1 {
-    line-height: 1.15;
-    margin-bottom: 0.75rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
     padding-left: 0;
+    font-size: clamp(24px, 5vw, 60px);
 }
 
 /* WORK EXPERIENCE SECTION */
@@ -744,15 +759,18 @@ img{
 .work-exp-job-title {
     display: block;
     font-size: 18px;
-    color: var(--y-selected-text);
+    color: #00FFFF;
     margin-bottom: 12px;
     letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 .work-exp-desc {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.5px;
     flex: 1;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 /* PROJECT DUAL-BUTTON ROW */
@@ -828,6 +846,8 @@ img{
     line-height: 1.6;
     letter-spacing: 0.5px;
     margin-bottom: 15px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
 }
 .project-modal ul {
     list-style: none;
@@ -838,6 +858,7 @@ img{
     font-size: 18px;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    color: #FFFFFF;
 }
 .project-modal ul li::before {
     content: '\25B8  ';
@@ -927,13 +948,14 @@ img{
 }
 .edu-info-text h3 {
     font-size: 22px;
-    color: var(--w-selected-text);
+    color: #FF00FF;
     font-weight: 400;
 }
 .edu-info-text h4 {
     font-size: 18px;
-    color: var(--y-non-selected-text);
+    color: #FF00FF;
     font-weight: 300;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
 }
 .edu-gpa {
     font-size: 16px;
@@ -969,17 +991,19 @@ img{
     margin-bottom: 15px;
 }
 .edu-pill {
-    border: 1px solid var(--b-non-selected-text);
+    border: 1px solid #FFFFFF;
     border-radius: 20px;
     padding: 4px 14px;
     font-size: 14px;
-    color: var(--b-selected-text);
+    color: #FFFFFF;
     letter-spacing: 0.5px;
 }
 .edu-description {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.5px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
 }
 
 /* PHASE 2 RESPONSIVE */

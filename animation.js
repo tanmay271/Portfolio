@@ -1,22 +1,31 @@
+// MUSIC TOGGLE
+// Audio starts muted by default (autoplay + muted in index.html);
+// this control is how a visitor opts in to sound.
 
-
-// // MUSIC 
 let musicBtn = document.querySelector('.sound-settings');
+let music = document.querySelector('.player');
 
-musicBtn.addEventListener('click', () => {
-    let music = document.querySelector('.player');
-    let soundIcon = document.querySelector('.fa-volume-up');
-    music = document.querySelector('.player');
-    if (musicBtn.classList.contains('muted')) {
-        music.play();
+function toggleMusic() {
+    let soundIcon = musicBtn.querySelector('i');
+
+    if (music.muted) {
+        music.muted = false;
+        music.play().catch(function () {});
         musicBtn.classList.remove('muted');
-        soundIcon.style.color = "var(--y-non-selected-text)";
+        soundIcon.classList.remove('fa-volume-mute');
+        soundIcon.classList.add('fa-volume-up');
     } else {
-        music.pause();
+        music.muted = true;
         musicBtn.classList.add('muted');
-        soundIcon.style.color = "red";
-
+        soundIcon.classList.remove('fa-volume-up');
+        soundIcon.classList.add('fa-volume-mute');
     }
+}
 
-})
-// /MUSIC
+musicBtn.addEventListener('click', toggleMusic);
+musicBtn.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMusic();
+    }
+});

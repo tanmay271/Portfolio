@@ -1,509 +1,270 @@
 // ============================
-// CONTENT SECTIONS
+// PROJECT DATA (drives the project modal)
 // ============================
 
-let homeContent = `<div class="content-wrapper">
-<section class="home ">
-    <div class="greetings content-card">
-        <div class="greetings-title">
-            <h1 class="t1"> Hi, </h1>
-            <h1 class="t2"> my name is <span>Tanmay</span>. </h1>
-            <h1 class="t3"> I'm a Full-Stack Machine Learning Engineer. </h1>
-        </div>
-
-    </div>
-
-</section>`;
-
-let workExpContent = `<section class="work-exp-wrapper">
-    <div class="work-exp-container work-exp-content-card">
-        <div class="work-exp-title">
-            <h1>Work</h1>
-        </div>
-        <div class="work-exp-grid">
-            <div class="work-exp-card">
-                <div class="work-exp-card-header">
-                    <img src="./casp.png" alt="Caspex Logo">
-                    <h4>Caspex</h4>
-                </div>
-                <span class="work-exp-job-title">Software Developer Intern</span>
-                <p class="work-exp-desc">Engineered scalable Flask REST APIs with PostgreSQL and AWS Lambda, supporting 12,000+ daily transactions. Optimized cloud data pipelines using Pandas and NumPy, reducing system log latency by 20%. Automated deployment via GitHub CI/CD, increasing release frequency by 25%.</p>
-            </div>
-            <div class="work-exp-card">
-                <div class="work-exp-card-header">
-                    <img src="./hygwell.png" alt="Hygwell Logo">
-                    <h4>Hygwell</h4>
-                </div>
-                <span class="work-exp-job-title">Software Developer Intern</span>
-                <p class="work-exp-desc">Orchestrated data pipelines using Python and Snowflake to automate cleaning for 100,000+ patient records, reducing manual effort by 25%. Trained Scikit-learn classification models, improving pharmaceutical decision accuracy by 15%. Deployed interactive Power BI dashboards via GitHub Actions.</p>
-            </div>
-            <div class="work-exp-card">
-                <div class="work-exp-card-header">
-                    <img src="./hmt.png" alt="Happiest Minds Logo">
-                    <h4>Happiest Minds</h4>
-                </div>
-                <span class="work-exp-job-title">Data Science Intern</span>
-                <p class="work-exp-desc">Architected an AI predictive maintenance pipeline for Metro Train APUs, processing high-frequency telemetry from 15 IoT sensors. Engineered a custom pipeline to extract FFT spectral features, feeding a 1D-CNN optimized for sequential data. Achieved 96.4% early fault detection accuracy.</p>
-            </div>
-        </div>
-    </div>
-</section>`;
-
-let projectsContent = `
-        <div class="work-content work-content-card">
-            <div class="work-gallery">
-
-                <div class="work-project-card card-4">
-                    <h1 class="work-project-card-title">Semi-supervised Pneumonia Detection</h1>
-                    <img class="workPic" src="./semi.jpeg">
-                    <div class="project-btn-row">
-                        <a href="https://github.com/tanmay271/Semi-supervised-pneumonia-detection-using-Deep-Learning" target="_blank">
-                        <p class="button-project btn-github">Go to GitHub</p></a>
-                        <p class="button-project btn-github project-desc-btn" data-project="Semi-supervised Pneumonia Detection">Project Description</p>
-                    </div>
-                </div>
-
-                <div class="work-project-card card-3">
-                    <h1 class="work-project-card-title">Predictive Maintenance ML Pipeline</h1>
-                    <img class="workPic" src="./metro.jpeg">
-                    <div class="project-btn-row">
-                        <a href="https://github.com/tanmay271/Train-Predictive-maintenance-using-AI" target="_blank">
-                        <p class="button-project btn-github">Go to GitHub</p></a>
-                        <p class="button-project btn-github project-desc-btn" data-project="Predictive Maintenance ML Pipeline">Project Description</p>
-                    </div>
-                </div>
-
-                <div class="work-project-card card-2">
-                    <h1 class="work-project-card-title">RAG-Qdrant-AI</h1>
-                    <img class="workPic" src="./RAG.jpeg">
-                    <div class="project-btn-row">
-                        <a href="https://github.com/tanmay271/RAG-Qdrant-AI" target="_blank">
-                        <p class="button-project btn-github">Go to GitHub</p></a>
-                        <p class="button-project btn-github project-desc-btn" data-project="RAG-Qdrant-AI">Project Description</p>
-                    </div>
-                </div>
-
-                <div class="work-project-card card-1">
-                    <h1 class="work-project-card-title">Zenith Space Tourism</h1>
-                    <img class="workPic" src="./zenith.jpeg">
-                    <div class="project-btn-row">
-                        <a href="https://github.com/tanmay271/zenith-space-app" target="_blank">
-                        <p class="button-project btn-github">Go to GitHub</p></a>
-                        <p class="button-project btn-github project-desc-btn" data-project="Zenith Space Tourism">Project Description</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-`;
-
-let mobileContent = `<section class="work-wrapper">
-<div class="work-content work-content-card">
-    <div class="work-gallery">
-
-        <div class="work-project-card card-6">
-            <h1 class="work-project-card-title ">
-            Real Estate Gold
-            </h1>
-            <a href="https://hopeful-einstein-2a0f32.netlify.com/" target="_blank">
-            <img class="qr-card" src="./QRprojects/realestateQR.jpg"> </a>
-            <a href="https://github.com/DjordjevicN/Real-Estate-gold">  
-            <p class="button-project btn-github ">Go to GITHUB</p></a>
-        </div>
-
-        <div class="work-project-card card-5">
-            <h1 class="work-project-card-title ">
-                Digital Agency
-            </h1>
-            <a href="https://djordjevicn.github.io/Digital-Agency/" target="_blank">
-            <img class="qr-card" src="./QRprojects/digitalagensyQR.jpg"> </a>
-            <a href="https://github.com/DjordjevicN/Digital-Agency" target="_blank">  
-            <p class="button-project btn-github ">Go to GITHUB</p>
-            </a>
-        </div>
-
-        <div class="work-project-card card-4">
-                <h1 class="work-project-card-title ">
-                Mountain Parallax
-            </h1>
-                <a href="https://djordjevicn.github.io/Parallax-practise-Mountin/" target="_blank">
-            <img class="qr-card" src="./QRprojects/paralaxMountinQR.jpg"> </a>
-            <a href="https://github.com/DjordjevicN/Parallax-practise-Mountin" target="_blank">  
-            <p class="button-project btn-github ">Go to GITHUB</p>
-            </a>
-        </div>
-
-        <div class="work-project-card card-3">
-            <h1 class="work-project-card-title ">
-                Shoe Shop
-            </h1>
-            <a href="https://djordjevicn.github.io/tezga-shop-shoes/" target="_blank">
-            <img class="qr-card" src="./QRprojects/tezgaShopQR.jpg"> </a>
-            <a href="https://github.com/DjordjevicN/tezga-shop-shoes" target="_blank">  
-            <p class="button-project btn-github ">Go to GITHUB</p>
-            </a>
-        </div>
-
-        <div class="work-project-card card-2">
-            <h1 class="work-project-card-title ">
-                Burger Online
-            </h1>
-            <a href="https://djordjevicn.github.io/eCommerce-Burgelicious/" target="_blank">
-            <img class="qr-card" src="./QRprojects/burgelicious.jpg"> </a>
-            <a href="https://github.com/DjordjevicN/eCommerce-Burgelicious" target="_blank">  
-            <p class="button-project btn-github ">Go to GITHUB</p>
-            </a>
-        </div>
-
-        <div class="work-project-card card-1">
-            <h1 class="work-project-card-title ">
-                Movie Search
-            </h1>
-            <a href="https://djordjevicn.github.io/Movie-Search-API-/" target="_blank">
-            <img class="qr-card" src="./QRprojects/movieSearchQR.jpg"> </a>
-            <a href="https://github.com/DjordjevicN/Movie-Search-API-" target="_blank">  
-            <p class="button-project btn-github ">Go to GITHUB</p>
-            </a>
-        </div>
-
-        
-    </div>
-    <p class="mobile">GO MOBILE</p>
-</div>
-
-</section>`;
-
-let educationContent = `<section class="edu-wrapper">
-    <div class="edu-content-card">
-        <div class="edu-title">
-            <h1>Education</h1>
-        </div>
-        <div class="edu-grid">
-            <div class="edu-card">
-                <div class="edu-top-bar">
-                    <span class="edu-tag">[ACAD-001]</span>
-                    <span class="edu-status">[IN PROGRESS]</span>
-                </div>
-                <div class="edu-main-info">
-                    <img src="./umdd.png" alt="UMD Logo">
-                    <div class="edu-info-text">
-                        <h3>University of Maryland, College Park</h3>
-                        <h4>Master of Science // Data Science</h4>
-                    </div>
-                </div>
-                <hr class="edu-divider">
-                <div class="edu-modules-header">
-                    <span class="edu-modules-label">&#9660; CORE MODULES</span>
-                </div>
-                <div class="edu-pills">
-                    <span class="edu-pill">Principles of Machine Learning</span>
-                    <span class="edu-pill">Big Data Systems</span>
-                    <span class="edu-pill">Algorithms for Data Science</span>
-                    <span class="edu-pill">Data Representation and Modeling</span>
-                </div>
-                <p class="edu-description">Currently pursuing advanced graduate studies focused on scalable data architectures and theoretical machine learning. Specializing in designing big data systems and optimizing algorithms to solve complex, high-volume analytical challenges at an enterprise scale.</p>
-            </div>
-            <div class="edu-card">
-                <div class="edu-top-bar">
-                    <span class="edu-tag">[ACAD-002]</span>
-                    <span class="edu-status">[COMPLETE]</span>
-                </div>
-                <div class="edu-main-info">
-                    <img src="./ggs.png" alt="GGSIPU Logo">
-                    <div class="edu-info-text">
-                        <h3>Guru Gobind Singh Indraprastha University, Delhi</h3>
-                        <h4>Bachelor of Technology // AI and Machine Learning</h4>
-                    </div>
-                </div>
-                <hr class="edu-divider">
-                <div class="edu-modules-header">
-                    <span class="edu-modules-label">&#9660; CORE MODULES</span>
-                </div>
-                <div class="edu-pills">
-                    <span class="edu-pill">Data Structures</span>
-                    <span class="edu-pill">Design and Analysis of Algorithms</span>
-                    <span class="edu-pill">Fundamentals of Deep Learning</span>
-                    <span class="edu-pill">Natural Language Processing</span>
-                    <span class="edu-pill">Computer Vision</span>
-                </div>
-                <p class="edu-description">Completed a rigorous undergraduate program blending foundational computer science with specialized AI methodologies. Developed hands-on software engineering capabilities while engineering complex machine learning models, laying the groundwork for scalable, data-driven system design.</p>
-            </div>
-        </div>
-    </div>
-</section>`;
-
-// ============================
-// DOM SELECTIONS
-// ============================
-
-const home = document.querySelector("#home");
-const work = document.querySelector("#work");
-const projects = document.querySelector("#projects");
-const education = document.querySelector("#education");
-let contentBox = document.querySelector(".content-wrapper");
-let phoneContact = document.querySelector(".letsTalk");
-
-// ============================
-// PROJECT DESCRIPTION MODAL
-// ============================
-
-const projectDescriptions = {
-    'Semi-supervised Pneumonia Detection': {
-        img: './semi.jpeg',
-        summary: 'This project addresses labeled data scarcity by implementing a semi-supervised learning pipeline. It learns visual representations from 9,243 unlabeled chest X-rays using SimCLRv2 contrastive pretraining, then fine-tunes an ensemble of DenseNet169, MobileNetV2, and a 6-layer Vision Transformer. A Feature Attention Network (FA-NET) applies channel and spatial attention for enhanced feature selection.'
+const projectData = {
+    'threshold': {
+        tag: '[PROJ-001]',
+        name: 'Threshold',
+        subtitle: 'AI Onboarding Document Generator',
+        img: './screenshots/threshold.jpg',
+        alt: 'Threshold AI onboarding document generator app screenshot',
+        tags: ['Claude API', 'Python (Async)', 'Streamlit', 'ReportLab', 'Generative AI', 'Python'],
+        problem: 'New-hire onboarding paperwork is manually assembled per role and country, with country-specific compliance requirements easy to miss.',
+        functionality: 'Runs 5 concurrent Claude API calls to generate a welcome email, a 30-60-90 day plan, a compliance checklist, a first-week schedule, and a manager briefing — tailored to role and site, with built-in compliance logic for the US (ITAR/EAR), Germany (GDPR), and Singapore (MOM/CPF). Compiles everything into one branded PDF.',
+        impact: 'Collapses a multi-document, multi-stakeholder onboarding process into a single generation step, under 30 seconds.',
+        github: 'https://github.com/tanmay271/threshold',
+        live: 'https://threshold-hr.streamlit.app'
     },
-    'Predictive Maintenance ML Pipeline': {
+    'wren': {
+        tag: '[PROJ-002]',
+        name: 'Wren',
+        subtitle: 'RAG Chatbot for HR Policy Q&A',
+        img: './screenshots/wren.jpg',
+        alt: 'Wren RAG chatbot for HR policy Q&A app screenshot',
+        tags: ['LlamaIndex', 'ChromaDB', 'FastEmbed', 'Claude', 'Generative AI', 'RAG', 'Python'],
+        problem: 'HR policy answers are scattered across documents; generic chatbots risk confidently inventing policy that doesn\'t exist.',
+        functionality: 'A full RAG pipeline (chunking → embeddings → ChromaDB vector store) retrieves the top-3 semantically relevant passages for a query and cites the exact source page, grounding every generated answer.',
+        impact: 'Reduces reliance on HR staff for repetitive policy lookups while keeping every answer traceable to source.',
+        github: 'https://github.com/tanmay271/wren',
+        live: 'https://wren-ai.streamlit.app'
+    },
+    'lumen': {
+        tag: '[PROJ-003]',
+        name: 'Lumen',
+        subtitle: 'AI-Narrated HR Workforce Analytics Dashboard',
+        img: './screenshots/lumen.jpg',
+        alt: 'Lumen AI-narrated HR workforce analytics dashboard app screenshot',
+        tags: ['Streamlit', 'Plotly', 'Claude', 'Python', 'Data Visualization'],
+        problem: 'Workforce dashboards show numbers but leave interpretation to the viewer, slowing down how stakeholders act on people-analytics data.',
+        functionality: 'A multi-page dashboard over workforce data (headcount, hiring pipeline, program tracking) with a Claude-generated "AI Insights" narration layer on every page, plus natural-language Q&A directly over the underlying data.',
+        impact: 'Lets a non-technical stakeholder get the "so what" of workforce data without reading raw charts themselves.',
+        github: 'https://github.com/tanmay271/lumen',
+        live: 'https://lumen-hr.streamlit.app'
+    },
+    'metropt': {
+        tag: '[PROJ-004]',
+        name: 'Predictive Maintenance ML Pipeline',
+        subtitle: 'MetroPT3',
         img: './metro.jpeg',
-        summary: 'Built a production-ready pipeline that ingests 1.5 million rows of real-world IoT sensor data. It engineers 183 advanced signal features using rolling-window statistics and FFT spectral analysis to train a Random Forest classifier. The system follows a clean modular architecture with centralized YAML-driven configuration.'
+        alt: 'Predictive maintenance ML pipeline architecture diagram',
+        tags: ['Python', 'Scikit-learn', 'FFT', 'YAML-config pipeline', 'Machine Learning'],
+        problem: 'Continuation of prior research into unplanned downtime in metro rail Air Production Units.',
+        functionality: '183 engineered features (12 time-domain + 14 FFT-spectral × 7 sensors + 1 indicator) feeding a StandardScaler → Random Forest classifier, in a config-driven (YAML) pipeline with structured logging.',
+        impact: 'A personal continuation demonstrating a different technical approach (Random Forest vs. the original 1D-CNN) to the same real-world problem, on the public MetroPT3 dataset.',
+        github: 'https://github.com/tanmay271/Train-Predictive-maintenance-using-AI'
     },
-    'RAG-Qdrant-AI': {
+    'pneumonia': {
+        tag: '[PROJ-005]',
+        name: 'Semi-supervised Pneumonia Detection',
+        subtitle: '',
+        img: './semi.jpeg',
+        alt: 'Semi-supervised pneumonia detection model architecture diagram',
+        tags: ['TensorFlow', 'Vision Transformers', 'DenseNet169', 'SimCLRv2', 'Deep Learning', 'Computer Vision'],
+        problem: 'Labeled medical imaging data is scarce and expensive to produce.',
+        functionality: 'SimCLRv2 contrastive pretraining on unlabeled X-rays → ensemble supervised fine-tuning (DenseNet169, MobileNetV2, Vision Transformer) → a custom Feature Attention Network (channel + spatial attention) for enhanced feature selection.',
+        impact: '94% accuracy, 0.95 F1 on the pneumonia class, on the public Kaggle chest X-ray dataset.',
+        github: 'https://github.com/tanmay271/Semi-supervised-pneumonia-detection-using-Deep-Learning'
+    },
+    'rag-qdrant': {
+        tag: '[PROJ-006]',
+        name: 'RAG-Qdrant-AI',
+        subtitle: '',
         img: './RAG.jpeg',
-        summary: 'Engineered a production-ready RAG backend to solve LLM hallucinations. By leveraging a Qdrant vector database and the OpenAI API, this system processes raw documents into high-dimensional embeddings to perform rapid semantic searches, ensuring AI responses are strictly grounded in factual data.'
+        alt: 'RAG-Qdrant-AI retrieval-augmented generation pipeline diagram',
+        tags: ['Python', 'OpenAI API', 'Qdrant', 'tiktoken', 'Generative AI', 'Vector Search'],
+        problem: 'LLM answers aren\'t grounded in fact by default, risking confident hallucination.',
+        functionality: 'A hand-built (no LangChain) ingestion → embedding → Qdrant vector store → retrieval/generation pipeline with tiktoken-based semantic chunking.',
+        impact: 'Demonstrates the RAG mechanics directly rather than relying on a framework abstraction layer.',
+        github: 'https://github.com/tanmay271/RAG-Qdrant-AI'
     },
-    'Zenith Space Tourism': {
+    'zenith': {
+        tag: '[PROJ-007]',
+        name: 'Zenith Space Tourism',
+        subtitle: '',
         img: './zenith.jpeg',
-        summary: 'A production-grade, decoupled monorepo demonstrating modern web architecture. Driven by Next.js 14 and Strapi v5, the infrastructure is automatically provisioned using Render\'s Infrastructure as Code (IaC) for zero-downtime continuous integration of the PostgreSQL database.'
+        alt: 'Zenith Space Tourism web app screenshot',
+        tags: ['Next.js 14', 'Strapi v5', 'Render IaC', 'Full-Stack Development'],
+        problem: 'A monorepo demonstrating modern decoupled architecture — a Next.js frontend, a Strapi headless CMS backend, and automated cloud provisioning via Infrastructure-as-Code.',
+        functionality: 'A monorepo demonstrating modern decoupled architecture — a Next.js frontend, a Strapi headless CMS backend, and automated cloud provisioning via Infrastructure-as-Code.',
+        impact: 'Shows full-stack web engineering range beyond the ML-focused projects.',
+        github: 'https://github.com/tanmay271/zenith-space-app'
+        // No confirmed live URL found in the prior codebase — Live button omitted.
     }
 };
 
-function openProjectModal(projectTitle) {
-    let data = projectDescriptions[projectTitle] || { img: '', summary: '' };
-    let modalOverlay = document.createElement('div');
-    modalOverlay.className = 'project-modal-overlay';
-    modalOverlay.innerHTML = `
-        <div class="project-modal">
-            <button class="project-modal-close">&times;</button>
-            <h1>${projectTitle}</h1>
-            <img class="project-modal-img" src="${data.img}" alt="${projectTitle} Architecture">
-            <p>${data.summary}</p>
+// ============================
+// PROJECT MODAL
+// ============================
+
+const projectModalOverlay = document.getElementById('projectModalOverlay');
+const projectModalContent = document.getElementById('projectModalContent');
+const projectModalClose = document.getElementById('projectModalClose');
+let lastFocusedElement = null;
+
+function openProjectModal(key) {
+    const data = projectData[key];
+    if (!data) return;
+
+    const liveButton = data.live
+        ? `<a href="${data.live}" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>`
+        : '';
+
+    projectModalContent.innerHTML = `
+        <div class="project-modal-header">
+            <span class="hud-tag">${data.tag}</span>
+            <h2 id="projectModalTitle">${data.name}</h2>
+        </div>
+        <div class="tag-row">
+            ${data.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+        </div>
+        <img class="project-modal-img" src="${data.img}" alt="${data.alt}" loading="lazy">
+        <div class="project-modal-section">
+            <span class="hud-label">&#9660; PROBLEM</span>
+            <p>${data.problem}</p>
+        </div>
+        <div class="project-modal-section">
+            <span class="hud-label">&#9660; FUNCTIONALITY</span>
+            <p>${data.functionality}</p>
+        </div>
+        <div class="project-modal-section">
+            <span class="hud-label">&#9660; BUSINESS IMPACT</span>
+            <p>${data.impact}</p>
+        </div>
+        <div class="project-btn-row">
+            <a href="${data.github}" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+            ${liveButton}
         </div>
     `;
-    document.body.appendChild(modalOverlay);
 
-    modalOverlay.querySelector('.project-modal-close').addEventListener('click', function() {
-        document.body.removeChild(modalOverlay);
-    });
-    modalOverlay.addEventListener('click', function(e) {
-        if (e.target === modalOverlay) {
-            document.body.removeChild(modalOverlay);
-        }
-    });
+    lastFocusedElement = document.activeElement;
+    projectModalOverlay.hidden = false;
+    projectModalClose.focus();
+    document.body.style.overflow = 'hidden';
 }
 
-function attachProjectDescListeners() {
-    document.querySelectorAll('.project-desc-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            openProjectModal(btn.dataset.project);
+function closeProjectModal() {
+    projectModalOverlay.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocusedElement) lastFocusedElement.focus();
+}
+
+function attachProjectCardListeners() {
+    document.querySelectorAll('.project-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+            openProjectModal(card.dataset.project);
+        });
+        card.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openProjectModal(card.dataset.project);
+            }
         });
     });
 }
 
+projectModalClose.addEventListener('click', closeProjectModal);
+projectModalOverlay.addEventListener('click', function (e) {
+    if (e.target === projectModalOverlay) closeProjectModal();
+});
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !projectModalOverlay.hidden) closeProjectModal();
+});
+
 // ============================
-// MAIN APP LOGIC
+// TYPEWRITER (Home title)
 // ============================
 
-document.addEventListener("DOMContentLoaded", () => {
-  let enterSequence = new TimelineMax({});
+function runTypewriter() {
+    const titleEl = document.getElementById('typedTitle');
+    const cursorEl = document.getElementById('typeCursor');
+    const taglineEl = document.getElementById('heroTagline');
+    const chipsEl = document.getElementById('heroChips');
+    const buttonsEl = document.getElementById('heroButtons');
+    const fullText = 'AI Engineer';
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  contentBox.innerHTML = "";
-  contentBox.innerHTML = homeContent;
-  enterSequence
-    .from(".letsTalk", 1, {
-      x: -300
-    })
-    .from("#home", 0.1, {
-      opacity: 0
-    })
-    .from("#home", 0.3, {
-      y: 400,
-      fontSize: 250
-    })
-    .from("#work", 0.1, {
-      opacity: 0
-    })
-    .from("#work", 0.3, {
-      y: 400,
-      fontSize: 250
-    })
-    .from("#projects", 0.1, {
-      opacity: 0
-    })
-    .from("#projects", 0.3, {
-      y: 400,
-      fontSize: 250
-    })
-    .from("#education", 0.1, {
-      opacity: 0
-    })
-    .from("#education", 0.3, {
-      y: 400,
-      fontSize: 250
-    })
-    .from(".home", 1, {
-      opacity: 0,
-      x: -300
-    })
-    .from(".t1", 0.1, {
-      opacity: 0
-    })
-    .from(".t2", 0.1, {
-      opacity: 0
-    })
-    .from(".t3", 0.1, {
-      opacity: 0
-    })
-    .from(".interface-settings li", 0.9, {
-      x: 350
+    function revealRest() {
+        taglineEl.classList.add('visible');
+        chipsEl.classList.add('visible');
+        buttonsEl.classList.add('visible');
+    }
+
+    if (reducedMotion) {
+        titleEl.textContent = fullText;
+        cursorEl.style.display = 'none';
+        revealRest();
+        return;
+    }
+
+    let i = 0;
+    (function typeChar() {
+        if (i <= fullText.length) {
+            titleEl.textContent = fullText.slice(0, i);
+            i++;
+            setTimeout(typeChar, 70);
+        } else {
+            cursorEl.classList.add('blink');
+            revealRest();
+        }
+    })();
+}
+
+// ============================
+// SCROLLSPY + SECTION REVEAL
+// ============================
+
+function setupScrollSpy() {
+    const sections = document.querySelectorAll('main > section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Sections are often much taller than the viewport (e.g. Work), so a
+    // ratio-based threshold like 0.5 would rarely be reachable. Instead,
+    // watch a thin horizontal band centered in the viewport — whichever
+    // section currently overlaps that band is "in view".
+    const spyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                navLinks.forEach(function (link) {
+                    link.classList.toggle('active', link.dataset.section === id);
+                });
+            }
+        });
+    }, { threshold: 0, rootMargin: '-45% 0px -45% 0px' });
+
+    sections.forEach(function (section) {
+        spyObserver.observe(section);
     });
+}
 
-  // HOME
-  home.addEventListener("click", () => {
-    contentBox.innerHTML = "";
-    contentBox.innerHTML = homeContent;
-    let openHome = new TimelineMax({});
-    openHome
-      .from(".home", 1, {
-        opacity: 0,
-        x: -300
-      })
-      .from(".t1", 0.1, {
-        opacity: 0
-      })
-      .from(".t2", 0.1, {
-        opacity: 0
-      })
-      .from(".t3", 0.1, {
-        opacity: 0
-      });
-  });
+function setupRevealOnScroll() {
+    const revealEls = document.querySelectorAll('.reveal');
 
-  // WORK (Professional Experience)
-  work.addEventListener("click", () => {
-    contentBox.innerHTML = "";
-    contentBox.innerHTML = workExpContent;
-    let openWorkExp = new TimelineMax({});
-    openWorkExp
-      .from(".work-exp-container", 1, {
-        opacity: 0,
-        x: 300
-      })
-      .from(
-        ".work-exp-title h1",
-        0.1,
-        {
-          opacity: 0
-        },
-        "ww"
-      )
-      .from(".work-exp-title h1", 0.1, {
-        opacity: 1
-      })
-      .from(".work-exp-title h1", 0.1, {
-        opacity: 0
-      })
-      .from(".work-exp-title h1", 0.1, {
-        opacity: 1
-      })
-      .from(".work-exp-title h1", 0.1, {
-        opacity: 0
-      })
-      .from(".work-exp-card", 0.2, {
-        opacity: 0
-      });
-  });
+    // Sections are often taller than the viewport, so trigger as soon as
+    // the section starts entering rather than requiring a fixed ratio of
+    // its (possibly very large) area to be visible at once.
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
 
-  // PROJECTS (old Work section repurposed)
-  projects.addEventListener("click", () => {
-    contentBox.innerHTML = "";
-    contentBox.innerHTML = projectsContent;
-    let openProjects = new TimelineMax({});
-
-    openProjects
-      .from(".work-content-card", 1, {
-        opacity: 0,
-        x: -300
-      })
-      .from(
-        ".card-4",
-        0.1,
-        {
-          opacity: 0
-        },
-        "op"
-      )
-      .from(
-        ".card-3",
-        0.1,
-        {
-          opacity: 0
-        },
-        "op"
-      )
-      .from(
-        ".card-2",
-        0.1,
-        {
-          opacity: 0
-        },
-        "oz"
-      )
-      .from(
-        ".card-1",
-        0.1,
-        {
-          opacity: 0
-        },
-        "oz"
-      );
-
-    // Attach project description modal listeners
-    attachProjectDescListeners();
-  });
-
-  // EDUCATION (old About section repurposed)
-  education.addEventListener("click", () => {
-    contentBox.innerHTML = "";
-    contentBox.innerHTML = educationContent;
-    let openEdu = new TimelineMax({});
-    openEdu
-      .from(".edu-content-card", 1, {
-        opacity: 0,
-        x: -300
-      })
-      .from(
-        ".edu-title h1",
-        0.1,
-        {
-          opacity: 0
-        },
-        "ww"
-      )
-      .from(".edu-title h1", 0.1, {
-        opacity: 1
-      })
-      .from(".edu-title h1", 0.1, {
-        opacity: 0
-      })
-      .from(".edu-title h1", 0.1, {
-        opacity: 1
-      })
-      .from(".edu-title h1", 0.1, {
-        opacity: 0
-      })
-      .from(".edu-card", 0.2, {
-        opacity: 0
-      });
-  });
-
-  // CONTACT TOGGLE
-  let openContact = new TimelineMax({ paused: true, reversed: true });
-  phoneContact.addEventListener("click", () => {
-    phoneContact.classList.toggle("opened");
-
-    openContact.reversed() ? openContact.play() : openContact.reverse();
-
-    openContact.to(".interface-settings li", 0.3, {
-      x: 350
+    revealEls.forEach(function (el) {
+        revealObserver.observe(el);
     });
-  });
+}
+
+// ============================
+// INIT
+// ============================
+
+document.addEventListener('DOMContentLoaded', function () {
+    attachProjectCardListeners();
+    setupScrollSpy();
+    setupRevealOnScroll();
+    runTypewriter();
 });

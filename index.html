@@ -3,91 +3,598 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Tanmay Sharma — Full-Stack AI/ML Engineer. AI that ships, not AI that demos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8e8e5e7a6c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Tanmay | Full-Stack ML Engineer</title>
-
+    <title>Tanmay | AI Engineer</title>
 </head>
 
 <body>
-    <!-- <div class="tooltip">Hover over me
-        <span class="tooltiptext">Tooltip text</span>
-    </div> -->
 
+    <audio class="player" src="./timecop1983_on_the_run_night_drive.mp3" autoplay muted loop></audio>
 
-
-
-    <audio class="player" src="./timecop1983_on_the_run_night_drive.mp3" autoplay="true"></audio>
-    </div>
     <div class="background">
         <img src="./gifs/bg1.gif" alt="">
     </div>
     <div class="bg-overlay"></div>
+
     <section class="navigation-wrapper">
-        <div class="sound-settings">
-            <i class="fas fa-volume-up"></i>
+        <div class="sound-settings" role="button" tabindex="0" aria-label="Toggle background music">
+            <i class="fas fa-volume-mute" aria-hidden="true"></i>
         </div>
-        <div class="nav-bar">
+        <nav class="nav-bar" aria-label="Section navigation">
             <ul>
-                <li id="home">Home</li>
-                <li id="work">Work</li>
-                <li id="projects">Projects</li>
-                <li id="education">Education</li>
+                <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+                <li><a href="#work" class="nav-link" data-section="work">Work</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </section>
-    <div class="content-wrapper">
-        <!-- CONTENT  -->
 
+    <main class="content-wrapper">
 
+        <!-- ============ HOME ============ -->
+        <section id="home" class="hero-section reveal">
+            <div class="panel hero-panel">
+                <div class="hud-corner hud-corner-tl" aria-hidden="true"></div>
+                <div class="hud-corner hud-corner-tr" aria-hidden="true"></div>
+                <div class="hud-corner hud-corner-bl" aria-hidden="true"></div>
+                <div class="hud-corner hud-corner-br" aria-hidden="true"></div>
+                <span class="hero-status-readout">STATUS: ONLINE</span>
 
-        <p class="mobile">GO MOBILE</p>
+                <h1 class="hero-name">Tanmay Sharma</h1>
+                <p class="hero-role">
+                    <span class="prompt-arrow" aria-hidden="true">&gt;</span><span class="typed-text" id="typedTitle"></span><span class="cursor" id="typeCursor" aria-hidden="true">_</span>
+                </p>
+                <p class="hero-tagline" id="heroTagline">AI that ships, not AI that demos.</p>
 
+                <div class="stat-chip-row" id="heroChips">
+                    <span class="stat-chip">MS Data Science @ UMD · 2027</span>
+                    <span class="stat-chip">AI Engineering Intern @ GlobalFoundries</span>
+                    <span class="stat-chip">Built an AI HR automation agent</span>
+                </div>
 
-        <!-- CONTENT  -->
-    </div>
-    <div class="footer">
-        <div class="interface-settings">
-            <ul>
-                <li>
-                    <a href="https://github.com/tanmay271" target="_blank">
-                        <i class="fab fa-github settings-green"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/tanmay-sharma-/" target="_blank">
-                        <i class="fab fa-linkedin settings-blue"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:tanmaysharmaa27@gmail.com">
-                        <i class="fas fa-envelope settings-pink"></i>
-                    </a>
-                </li>
-            </ul>
+                <div class="hero-buttons" id="heroButtons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+
+                    <span class="btn-resume-group">
+                        <a href="./Tanmay_Resume_.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-resume">Resume</a>
+                        <a href="./Tanmay_Resume_.pdf" download class="btn-icon" aria-label="Download resume PDF">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                        </a>
+                    </span>
+
+                    <a href="#contact" class="btn btn-secondary">Contact</a>
+                </div>
+            </div>
+
+            <a href="#work" class="scroll-cue" aria-label="Scroll down to Work section">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <!-- ============ WORK ============ -->
+        <section id="work" class="work-section reveal">
+            <div class="section-heading">
+                <span class="hud-tag">[WORK]</span>
+                <h2>Work</h2>
+            </div>
+
+            <div class="work-stack panel">
+
+                <!-- GlobalFoundries -->
+                <article class="work-card">
+                    <div class="hud-row">
+                        <span class="hud-tag">[WORK-001]</span>
+                        <span class="hud-status status-complete">[COMPLETE]</span>
+                    </div>
+                    <hr class="hud-divider">
+                    <div class="work-card-meta">
+                        <h3>GlobalFoundries <span class="meta-sep">·</span> Austin, TX <span class="meta-sep">·</span> Summer 2026</h3>
+                        <p class="work-card-title">AI Engineering Intern, HR Shared Services</p>
+                    </div>
+                    <hr class="hud-divider">
+
+                    <div class="work-card-body">
+                        <div class="work-card-main">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> PROBLEM</span>
+                                <ul class="hud-list">
+                                    <li>Salary ranges, internal parity, and equity/bonus targets reconciled manually across fragmented systems</li>
+                                    <li>Slow, inconsistent, and rework-prone across regions</li>
+                                </ul>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-chart-line" aria-hidden="true"></i> ANALYSIS</span>
+                                <ul class="hud-list">
+                                    <li>Ran EDA across enterprise HR compensation data</li>
+                                    <li>Identified reliable fields for role matching, compensation-range determination, and peer grouping globally</li>
+                                </ul>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-wrench" aria-hidden="true"></i> WHAT I BUILT</span>
+                                <p>OfferPilot AI &mdash; a multi-agent compensation copilot with a parent orchestrator routing to three regional (US/APAC/EMEA) agents for guided offer construction.</p>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-bolt" aria-hidden="true"></i> FEATURES</span>
+                                <ul class="hud-list">
+                                    <li>Two-stage design separates verified retrieval from AI-generated recommendations (Excel handles arithmetic, not the LLM)</li>
+                                    <li>Live Workday data integration</li>
+                                    <li>Privacy-guarded aggregate peer comparison</li>
+                                    <li>4-tab executive Excel export with vesting charts and rationale</li>
+                                    <li>Published to Microsoft 365 Copilot and Teams with access control</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="work-card-side">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-layer-group" aria-hidden="true"></i> STACK</span>
+                                <div class="tag-row">
+                                    <span class="tag">Microsoft Copilot Studio</span>
+                                    <span class="tag">Power Automate</span>
+                                    <span class="tag">Office Scripts (TypeScript)</span>
+                                    <span class="tag">Excel</span>
+                                    <span class="tag">Workday RaaS API</span>
+                                    <span class="tag">Generative AI</span>
+                                    <span class="tag">Multi-Agent Systems</span>
+                                    <span class="tag">Enterprise Automation</span>
+                                </div>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">~80&ndash;85%</span>
+                                <span class="stat-label">reduction in active offer-construction time per case</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Hygwell -->
+                <article class="work-card">
+                    <div class="hud-row">
+                        <span class="hud-tag">[WORK-002]</span>
+                        <span class="hud-status status-complete">[COMPLETE]</span>
+                    </div>
+                    <hr class="hud-divider">
+                    <div class="work-card-meta">
+                        <h3>Hygwell <span class="meta-sep">·</span> Remote <span class="meta-sep">·</span> Mar 2024 &ndash; Sep 2024</h3>
+                        <p class="work-card-title">Data Science Intern</p>
+                    </div>
+                    <hr class="hud-divider">
+
+                    <div class="work-card-body">
+                        <div class="work-card-main">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> PROBLEM</span>
+                                <ul class="hud-list">
+                                    <li>A GMP pharmaceutical manufacturer's QC, process engineering, and data teams manually reconciled lab results, batch records, and supplier certificates</li>
+                                    <li>Slow and error-prone in a heavily regulated environment</li>
+                                </ul>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-wrench" aria-hidden="true"></i> WHAT I BUILT</span>
+                                <p>An automated medallion-architecture pipeline (Raw &rarr; Clean &rarr; Curated) unifying LIMS QC results, MES batch records, and supplier Certificates of Analysis.</p>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-bolt" aria-hidden="true"></i> FEATURES</span>
+                                <ul class="hud-list">
+                                    <li>Change-data-capture orchestration &mdash; reprocessing only runs when new data arrives</li>
+                                    <li>Data-integrity validation framework mapped to ALCOA+ and 21 CFR Part 11 across six rule tiers</li>
+                                    <li>Failing records quarantined (never deleted) to preserve audit compliance</li>
+                                    <li>Scikit-learn model predicting batch out-of-specification risk on the validated data</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="work-card-side">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-layer-group" aria-hidden="true"></i> STACK</span>
+                                <div class="tag-row">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Snowflake</span>
+                                    <span class="tag">Scikit-learn</span>
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Data Pipelines</span>
+                                    <span class="tag">Regulatory Compliance</span>
+                                </div>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">~25%</span>
+                                <span class="stat-label">reduction in manual data-prep effort across 3 teams</span>
+                                <span class="stat-sub">99.6% data validation pass rate &middot; ~15% more accurate OOS prediction</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Caspex -->
+                <article class="work-card">
+                    <div class="hud-row">
+                        <span class="hud-tag">[WORK-003]</span>
+                        <span class="hud-status status-complete">[COMPLETE]</span>
+                    </div>
+                    <hr class="hud-divider">
+                    <div class="work-card-meta">
+                        <h3>Caspex <span class="meta-sep">·</span> Remote <span class="meta-sep">·</span> Oct 2023 &ndash; Mar 2024</h3>
+                        <p class="work-card-title">Software Developer Intern</p>
+                    </div>
+                    <hr class="hud-divider">
+
+                    <div class="work-card-body">
+                        <div class="work-card-main">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> PROBLEM</span>
+                                <ul class="hud-list">
+                                    <li>Client's industrial equipment-monitoring system needed a faster, more reliable data and API layer</li>
+                                    <li>Had to keep up with high-frequency sensor traffic</li>
+                                </ul>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-wrench" aria-hidden="true"></i> WHAT I BUILT</span>
+                                <p>End-to-end ownership of a vertical slice &mdash; data ingestion, backend API, and deployment pipeline &mdash; for the monitoring system.</p>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-bolt" aria-hidden="true"></i> FEATURES</span>
+                                <ul class="hud-list">
+                                    <li>Reusable per-source connectors normalizing multiple device formats into a common schema</li>
+                                    <li>Vectorized Pandas/NumPy processing replacing row-by-row iteration</li>
+                                    <li>Serverless Flask APIs on AWS Lambda with idempotent handling and dead-letter queues</li>
+                                    <li>GitHub Actions CI/CD with keyless OIDC AWS authentication and environment-gated deploys</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="work-card-side">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-layer-group" aria-hidden="true"></i> STACK</span>
+                                <div class="tag-row">
+                                    <span class="tag">Flask</span>
+                                    <span class="tag">AWS Lambda</span>
+                                    <span class="tag">Pandas/NumPy</span>
+                                    <span class="tag">GitHub Actions CI/CD</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">REST APIs</span>
+                                    <span class="tag">Cloud Infrastructure</span>
+                                </div>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">12,000+</span>
+                                <span class="stat-label">daily transactions at 99.9% uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Happiest Minds -->
+                <article class="work-card">
+                    <div class="hud-row">
+                        <span class="hud-tag">[WORK-004]</span>
+                        <span class="hud-status status-complete">[COMPLETE]</span>
+                    </div>
+                    <hr class="hud-divider">
+                    <div class="work-card-meta">
+                        <h3>Happiest Minds <span class="meta-sep">·</span> Noida, India <span class="meta-sep">·</span> Aug 2023 &ndash; Sep 2023</h3>
+                        <p class="work-card-title">Data Science Intern</p>
+                    </div>
+                    <hr class="hud-divider">
+
+                    <div class="work-card-body">
+                        <div class="work-card-main">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> PROBLEM</span>
+                                <ul class="hud-list">
+                                    <li>Metro rail operator needed early warning of developing faults in safety-critical Air Production Units (brakes, doors, suspension)</li>
+                                    <li>Needed detection before failure</li>
+                                </ul>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-database" aria-hidden="true"></i> DATA</span>
+                                <p>2 years of 5Hz multivariate time-series data from 15 analog and digital train sensors.</p>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-wrench" aria-hidden="true"></i> WHAT I BUILT</span>
+                                <p>Automated feature-extraction pipeline using FFT and rolling statistical windows, feeding a 1D-CNN trained to detect the temporal signature of a developing fault.</p>
+                            </div>
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-flask" aria-hidden="true"></i> METHODOLOGY</span>
+                                <ul class="hud-list">
+                                    <li>Time-ordered train/test split (no data leakage)</li>
+                                    <li>Class-weighted training for rare true-fault cases</li>
+                                    <li>Recall tracked explicitly on the fault class</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="work-card-side">
+                            <div class="hud-block">
+                                <span class="hud-label"><i class="fas fa-layer-group" aria-hidden="true"></i> STACK</span>
+                                <div class="tag-row">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">1D-CNN</span>
+                                    <span class="tag">FFT Signal Processing</span>
+                                    <span class="tag">Time-Series Analysis</span>
+                                    <span class="tag">Machine Learning</span>
+                                    <span class="tag">Signal Processing</span>
+                                </div>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">96.4%</span>
+                                <span class="stat-label">fault-prediction accuracy on unseen data</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects" class="projects-section reveal">
+            <div class="section-heading">
+                <span class="hud-tag">[PROJECTS]</span>
+                <h2>Projects</h2>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+
+                <div class="project-card panel" data-project="threshold" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Threshold project details">
+                    <div class="project-card-media">
+                        <img src="./screenshots/threshold.jpg" alt="Threshold AI onboarding document generator app screenshot" loading="lazy">
+                        <span class="live-badge"><span class="live-dot" aria-hidden="true"></span>LIVE</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-001]</span>
+                        <h3>Threshold</h3>
+                        <p class="project-tagline">Turns a new hire's role and location into a complete onboarding packet in under 30 seconds.</p>
+                        <div class="tag-row">
+                            <span class="tag">Claude API</span>
+                            <span class="tag">Python (Async)</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">ReportLab</span>
+                            <span class="tag">Generative AI</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card panel" data-project="wren" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Wren project details">
+                    <div class="project-card-media">
+                        <img src="./screenshots/wren.jpg" alt="Wren RAG chatbot for HR policy Q&A app screenshot" loading="lazy">
+                        <span class="live-badge"><span class="live-dot" aria-hidden="true"></span>LIVE</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-002]</span>
+                        <h3>Wren</h3>
+                        <p class="project-tagline">Answers HR policy questions with cited, grounded answers — no hallucinated policy.</p>
+                        <div class="tag-row">
+                            <span class="tag">LlamaIndex</span>
+                            <span class="tag">ChromaDB</span>
+                            <span class="tag">FastEmbed</span>
+                            <span class="tag">Claude</span>
+                            <span class="tag">Generative AI</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card panel" data-project="lumen" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Lumen project details">
+                    <div class="project-card-media">
+                        <img src="./screenshots/lumen.jpg" alt="Lumen AI-narrated HR workforce analytics dashboard app screenshot" loading="lazy">
+                        <span class="live-badge"><span class="live-dot" aria-hidden="true"></span>LIVE</span>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-003]</span>
+                        <h3>Lumen</h3>
+                        <p class="project-tagline">Turns workforce data into a plain-language, narrated story instead of a wall of charts.</p>
+                        <div class="tag-row">
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Claude</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card panel" data-project="metropt" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Predictive Maintenance ML Pipeline project details">
+                    <div class="project-card-media">
+                        <img src="./metro.jpeg" alt="Predictive maintenance ML pipeline architecture diagram" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-004]</span>
+                        <h3>Predictive Maintenance ML Pipeline</h3>
+                        <p class="project-tagline">Predicts train air-system faults before they happen, from 1.5M+ IoT sensor readings.</p>
+                        <div class="tag-row">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">FFT</span>
+                            <span class="tag">YAML-config pipeline</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card panel" data-project="pneumonia" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Semi-supervised Pneumonia Detection project details">
+                    <div class="project-card-media">
+                        <img src="./semi.jpeg" alt="Semi-supervised pneumonia detection model architecture diagram" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-005]</span>
+                        <h3>Semi-supervised Pneumonia Detection</h3>
+                        <p class="project-tagline">Detects pneumonia from chest X-rays using semi-supervised learning to overcome labeled-data scarcity.</p>
+                        <div class="tag-row">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Vision Transformers</span>
+                            <span class="tag">DenseNet169</span>
+                            <span class="tag">SimCLRv2</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card panel" data-project="rag-qdrant" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open RAG-Qdrant-AI project details">
+                    <div class="project-card-media">
+                        <img src="./RAG.jpeg" alt="RAG-Qdrant-AI retrieval-augmented generation pipeline diagram" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-006]</span>
+                        <h3>RAG-Qdrant-AI</h3>
+                        <p class="project-tagline">Grounds LLM answers in real documents using a hand-built RAG pipeline.</p>
+                        <div class="tag-row">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenAI API</span>
+                            <span class="tag">Qdrant</span>
+                            <span class="tag">tiktoken</span>
+                            <span class="tag">Generative AI</span>
+                            <span class="tag">Vector Search</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card panel" data-project="zenith" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Zenith Space Tourism project details">
+                    <div class="project-card-media">
+                        <img src="./zenith.jpeg" alt="Zenith Space Tourism web app screenshot" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <span class="hud-tag">[PROJ-007]</span>
+                        <h3>Zenith Space Tourism</h3>
+                        <p class="project-tagline">A production-grade, decoupled web app for a fictional space-tourism brand.</p>
+                        <div class="tag-row">
+                            <span class="tag">Next.js 14</span>
+                            <span class="tag">Strapi v5</span>
+                            <span class="tag">Render IaC</span>
+                            <span class="tag">Full-Stack Development</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section id="education" class="edu-section reveal">
+            <div class="section-heading">
+                <span class="hud-tag">[EDUCATION]</span>
+                <h2>Education</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node node-current">
+                        <img class="node-badge" src="./umdd.png" alt="UMD logo">
+                    </div>
+                    <div class="panel edu-card">
+                        <div class="edu-top-bar">
+                            <span class="edu-tag">[ACAD-001]</span>
+                            <span class="edu-status">[IN PROGRESS]</span>
+                        </div>
+                        <div class="edu-main-info">
+                            <div class="edu-info-text">
+                                <h3>University of Maryland, College Park</h3>
+                                <h4>Master of Science // Data Science</h4>
+                                <p class="edu-grad-note"><i class="fas fa-flag-checkered" aria-hidden="true"></i> Expected Graduation &mdash; May 2027</p>
+                            </div>
+                        </div>
+                        <hr class="edu-divider">
+                        <div class="edu-modules-header">
+                            <span class="edu-modules-label">&#9660; CORE MODULES</span>
+                        </div>
+                        <div class="edu-pills">
+                            <span class="edu-pill">Principles of Machine Learning</span>
+                            <span class="edu-pill">Big Data Systems</span>
+                            <span class="edu-pill">Algorithms for Data Science</span>
+                            <span class="edu-pill">Data Representation and Modeling</span>
+                        </div>
+                        <p class="edu-description">Currently pursuing advanced graduate studies focused on scalable data architectures and theoretical machine learning. Specializing in designing big data systems and optimizing algorithms to solve complex, high-volume analytical challenges at an enterprise scale.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node node-complete">
+                        <img class="node-badge" src="./ggs.png" alt="GGSIPU logo">
+                        <i class="fas fa-check node-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="panel edu-card">
+                        <div class="edu-top-bar">
+                            <span class="edu-tag">[ACAD-002]</span>
+                            <span class="edu-status">[COMPLETE]</span>
+                        </div>
+                        <div class="edu-main-info">
+                            <div class="edu-info-text">
+                                <h3>Guru Gobind Singh Indraprastha University, Delhi</h3>
+                                <h4>Bachelor of Technology // AI and Machine Learning</h4>
+                            </div>
+                        </div>
+                        <hr class="edu-divider">
+                        <div class="edu-modules-header">
+                            <span class="edu-modules-label">&#9660; CORE MODULES</span>
+                        </div>
+                        <div class="edu-pills">
+                            <span class="edu-pill">Data Structures</span>
+                            <span class="edu-pill">Design and Analysis of Algorithms</span>
+                            <span class="edu-pill">Fundamentals of Deep Learning</span>
+                            <span class="edu-pill">Natural Language Processing</span>
+                            <span class="edu-pill">Computer Vision</span>
+                        </div>
+                        <p class="edu-description">Completed a rigorous undergraduate program blending foundational computer science with specialized AI methodologies. Developed hands-on software engineering capabilities while engineering complex machine learning models, laying the groundwork for scalable, data-driven system design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="contact-section reveal">
+            <div class="panel contact-panel">
+                <h2>Let's sync.</h2>
+                <p class="contact-status-line">Based in College Park, MD</p>
+
+                <ul class="contact-rows">
+                    <li>
+                        <a href="https://github.com/tanmay271" target="_blank" rel="noopener" aria-label="GitHub: tanmay271">
+                            <i class="fab fa-github settings-green" aria-hidden="true"></i>
+                            <span class="contact-row-label">GITHUB &mdash; /tanmay271</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/tanmay-sharma-/" target="_blank" rel="noopener" aria-label="LinkedIn: tanmay-sharma-">
+                            <i class="fab fa-linkedin settings-blue" aria-hidden="true"></i>
+                            <span class="contact-row-label">LINKEDIN &mdash; /in/tanmay-sharma-</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:tanmaysharmaa27@gmail.com" aria-label="Email: tanmaysharmaa27@gmail.com">
+                            <i class="fas fa-envelope settings-pink" aria-hidden="true"></i>
+                            <span class="contact-row-label">EMAIL &mdash; tanmaysharmaa27@gmail.com</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="terminal-close">
+                    <p>&gt; connection_status: ready</p>
+                    <p>&gt; location: College Park, MD<span class="cursor blink" aria-hidden="true">_</span></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Project detail modal (shared, populated by app.js) -->
+    <div class="project-modal-overlay" id="projectModalOverlay" hidden>
+        <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+            <button class="project-modal-close" id="projectModalClose" aria-label="Close project details">&times;</button>
+            <div id="projectModalContent"></div>
         </div>
-        <div class="letsTalk">
-            <h1>Let's Talk</h1>
-            <i class="fas fa-chevron-down letsTalk-icon"></i>
-            <img class="phone-contact" src="./gifs/phone.gif" alt="OPEN CONTACT">
-        </div>
-
-
-
-
     </div>
-
-
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-
-
     <script src="./animation.js"></script>
     <script src="./app.js"></script>
 
